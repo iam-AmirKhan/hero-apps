@@ -1,0 +1,328 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co.com/1GVbyXR6/download.png",
+    "title": "TaskMaster",
+    "companyName": "Productive Labs",
+    "description": "TaskMaster is an all-in-one productivity app designed to help you organize your personal and professional life. Features include task management, reminders, project tracking, and progress visualization. Users can categorize tasks, create recurring events, and share projects with teammates.",
+    "size": 45,
+    "reviews": 1200,
+    "ratingAvg": 4.5,
+    "downloads": 500000,
+    "ratings": [
+      {"name": "1 star", "count": 50},
+      {"name": "2 star", "count": 80},
+      {"name": "3 star", "count": 200},
+      {"name": "4 star", "count": 400},
+      {"name": "5 star", "count": 470}
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co.com/QjD5M76k/download-1.png",
+    "title": "FitLife",
+    "companyName": "HealthTech Co",
+    "description": "FitLife is your personal health and fitness companion. Track workouts, calorie intake, sleep patterns, and heart rate. It offers personalized workout plans, guided exercises, meal tracking, and motivational challenges. Share progress with friends and compete to stay consistent.",
+    "size": 60,
+    "reviews": 850,
+    "ratingAvg": 4.2,
+    "downloads": 300000,
+    "ratings": [
+      {"name": "1 star", "count": 30},
+      {"name": "2 star", "count": 60},
+      {"name": "3 star", "count": 150},
+      {"name": "4 star", "count": 300},
+      {"name": "5 star", "count": 310}
+    ]
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co.com/pB0DHmZs/download-21.jpg",
+    "title": "PhotoSnap",
+    "companyName": "Pixel Studio",
+    "description": "PhotoSnap is a professional-grade photo capture and editing app for creators. It includes filters, adjustment tools, creative overlays, batch editing, cloud backup, and direct social sharing. Perfect for both beginners and professionals.",
+    "size": 80,
+    "reviews": 1500,
+    "ratingAvg": 4.7,
+    "downloads": 750000,
+    "ratings": [
+      {"name": "1 star", "count": 20},
+      {"name": "2 star", "count": 50},
+      {"name": "3 star", "count": 200},
+      {"name": "4 star", "count": 450},
+      {"name": "5 star", "count": 780}
+    ]
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co.com/v4x2sTfd/download-2.png",
+    "title": "TravelBuddy",
+    "companyName": "Wanderlust Inc.",
+    "description": "TravelBuddy helps plan trips with travel guides, itinerary management, and real-time recommendations. It provides maps, offline navigation, travel journals, and social features to share experiences.",
+    "size": 70,
+    "reviews": 1100,
+    "ratingAvg": 4.3,
+    "downloads": 400000,
+    "ratings": [
+      {"name": "1 star", "count": 40},
+      {"name": "2 star", "count": 60},
+      {"name": "3 star", "count": 300},
+      {"name": "4 star", "count": 400},
+      {"name": "5 star", "count": 300}
+    ]
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co.com/vvx9MzKc/download-22.jpg",
+    "title": "MindRelax",
+    "companyName": "Wellbeing Apps",
+    "description": "MindRelax reduces stress and improves mental health. Includes guided meditations, deep-breathing exercises, sleep aids, and mindfulness sessions. Track mood progress and integrate with wearable devices.",
+    "size": 55,
+    "reviews": 900,
+    "ratingAvg": 4.6,
+    "downloads": 250000,
+    "ratings": [
+      {"name": "1 star", "count": 10},
+      {"name": "2 star", "count": 20},
+      {"name": "3 star", "count": 100},
+      {"name": "4 star", "count": 300},
+      {"name": "5 star", "count": 470}
+    ]
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co.com/gZ1NJkJK/download-23.jpg",
+    "title": "NoteIt",
+    "companyName": "SmartApps",
+    "description": "NoteIt is a feature-rich note-taking app. Capture ideas, create to-do lists, and organize notes. Includes images, audio, checklists, and tags. Supports cloud sync, cross-device, and collaboration.",
+    "size": 35,
+    "reviews": 600,
+    "ratingAvg": 4.1,
+    "downloads": 150000,
+    "ratings": [
+      {"name": "1 star", "count": 20},
+      {"name": "2 star", "count": 40},
+      {"name": "3 star", "count": 120},
+      {"name": "4 star", "count": 250},
+      {"name": "5 star", "count": 170}
+    ]
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co.com/NgzGWqCw/download-24.jpg",
+    "title": "RecipeMaster",
+    "companyName": "Foodies Hub",
+    "description": "RecipeMaster provides recipes worldwide. Browse by cuisine, dietary preferences, or difficulty. Includes step-by-step instructions, ingredient substitutions, shopping list creation, and community sharing.",
+    "size": 90,
+    "reviews": 1300,
+    "ratingAvg": 4.4,
+    "downloads": 600000,
+    "ratings": [
+      {"name": "1 star", "count": 25},
+      {"name": "2 star", "count": 50},
+      {"name": "3 star", "count": 300},
+      {"name": "4 star", "count": 400},
+      {"name": "5 star", "count": 525}
+    ]
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co.com/GvcHx5x4/download-3.png",
+    "title": "BudgetTracker",
+    "companyName": "FinancePro",
+    "description": "BudgetTracker manages personal and business finances. Track income, expenses, and savings. Includes expense categorization, recurring transactions, budget alerts, and visual analytics.",
+    "size": 50,
+    "reviews": 700,
+    "ratingAvg": 4.2,
+    "downloads": 200000,
+    "ratings": [
+      {"name": "1 star", "count": 15},
+      {"name": "2 star", "count": 30},
+      {"name": "3 star", "count": 200},
+      {"name": "4 star", "count": 250},
+      {"name": "5 star", "count": 205}
+    ]
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co.com/zTvxvQSG/download-25.jpg",
+    "title": "SleepWell",
+    "companyName": "DreamTech",
+    "description": "SleepWell tracks sleep patterns and improves sleep quality. Provides insights into sleep cycles, duration, disturbances, personalized recommendations, sleep sounds, and wearable integration.",
+    "size": 40,
+    "reviews": 500,
+    "ratingAvg": 4.0,
+    "downloads": 100000,
+    "ratings": [
+      {"name": "1 star", "count": 20},
+      {"name": "2 star", "count": 30},
+      {"name": "3 star", "count": 150},
+      {"name": "4 star", "count": 200},
+      {"name": "5 star", "count": 100}
+    ]
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co.com/mV963L7z/download-4.png",
+    "title": "StudyBuddy",
+    "companyName": "EduTech",
+    "description": "StudyBuddy is an educational companion app. Helps students organize notes, create flashcards, track assignments, and prepare for exams with interactive quizzes and performance analytics.",
+    "size": 55,
+    "reviews": 650,
+    "ratingAvg": 4.3,
+    "downloads": 120000,
+    "ratings": [
+      {"name": "1 star", "count": 15},
+      {"name": "2 star", "count": 25},
+      {"name": "3 star", "count": 150},
+      {"name": "4 star", "count": 250},
+      {"name": "5 star", "count": 210}
+    ]
+  },
+  {
+    "id": 11,
+    "image": "https://i.ibb.co.com/FbpPXp6v/download-5.png",
+    "title": "WeatherPro",
+    "companyName": "Climate Apps",
+    "description": "WeatherPro delivers accurate and detailed weather forecasts. Includes hourly updates, severe weather alerts, radar maps, and personalized weather widgets.",
+    "size": 50,
+    "reviews": 800,
+    "ratingAvg": 4.4,
+    "downloads": 350000,
+    "ratings": [
+      {"name": "1 star", "count": 20},
+      {"name": "2 star", "count": 40},
+      {"name": "3 star", "count": 200},
+      {"name": "4 star", "count": 250},
+      {"name": "5 star", "count": 290}
+    ]
+  },
+  {
+    "id": 12,
+    "image": "https://i.ibb.co.com/p6yvbLbS/download-26.jpg",
+    "title": "MusicStream",
+    "companyName": "TuneTech",
+    "description": "MusicStream lets you listen to millions of tracks from around the world. Create playlists, discover new artists, and share music with friends. High-quality streaming and offline mode included.",
+    "size": 70,
+    "reviews": 1000,
+    "ratingAvg": 4.5,
+    "downloads": 550000,
+    "ratings": [
+      {"name": "1 star", "count": 25},
+      {"name": "2 star", "count": 50},
+      {"name": "3 star", "count": 200},
+      {"name": "4 star", "count": 300},
+      {"name": "5 star", "count": 425}
+    ]
+  },
+  {
+    "id": 13,
+    "image": "https://i.ibb.co.com/9mW80cbw/download-6.png",
+    "title": "Foodie",
+    "companyName": "EatWell",
+    "description": "Foodie helps users discover restaurants, order online, and find the best food deals. Includes reviews, menus, delivery tracking, and personalized recommendations.",
+    "size": 65,
+    "reviews": 950,
+    "ratingAvg": 4.2,
+    "downloads": 400000,
+    "ratings": [
+      {"name": "1 star", "count": 20},
+      {"name": "2 star", "count": 40},
+      {"name": "3 star", "count": 200},
+      {"name": "4 star", "count": 250},
+      {"name": "5 star", "count": 440}
+    ]
+  },
+  {
+    "id": 14,
+    "image": "https://i.ibb.co.com/s9wRQFCf/download-27.jpg",
+    "title": "ShopEasy",
+    "companyName": "EcomTech",
+    "description": "ShopEasy is a shopping app for discovering products, comparing prices, and getting deals. Features include wishlists, order tracking, and secure payment options.",
+    "size": 60,
+    "reviews": 1100,
+    "ratingAvg": 4.3,
+    "downloads": 500000,
+    "ratings": [
+      {"name": "1 star", "count": 30},
+      {"name": "2 star", "count": 50},
+      {"name": "3 star", "count": 200},
+      {"name": "4 star", "count": 400},
+      {"name": "5 star", "count": 420}
+    ]
+  },
+  {
+    "id": 15,
+    "image": "https://i.ibb.co.com/0jTdJqs5/download-7.png",
+    "title": "GameZone",
+    "companyName": "FunApps",
+    "description": "GameZone is a gaming platform providing access to casual, puzzle, and adventure games. Features include leaderboards, achievements, multiplayer mode, and daily challenges.",
+    "size": 85,
+    "reviews": 1400,
+    "ratingAvg": 4.6,
+    "downloads": 700000,
+    "ratings": [
+      {"name": "1 star", "count": 20},
+      {"name": "2 star", "count": 40},
+      {"name": "3 star", "count": 300},
+      {"name": "4 star", "count": 400},
+      {"name": "5 star", "count": 640}
+    ]
+  },
+  {
+    "id": 16,
+    "image": "https://i.ibb.co.com/s9wr39yK/download-8.png",
+    "title": "LanguagePro",
+    "companyName": "EduTech",
+    "description": "LanguagePro helps users learn new languages through interactive lessons, quizzes, speaking exercises, and progress tracking.",
+    "size": 55,
+    "reviews": 750,
+    "ratingAvg": 4.4,
+    "downloads": 350000,
+    "ratings": [
+      {"name": "1 star", "count": 15},
+      {"name": "2 star", "count": 30},
+      {"name": "3 star", "count": 200},
+      {"name": "4 star", "count": 250},
+      {"name": "5 star", "count": 255}
+    ]
+  },
+  {
+    "id": 17,
+    "image": "https://i.ibb.co.com/35xFYwmZ/download-28.jpg",
+    "title": "EventPlanner",
+    "companyName": "OrganizeIt",
+    "description": "EventPlanner helps plan events with schedules, invitations, RSVPs, and reminders. It also provides event templates and collaborative tools.",
+    "size": 65,
+    "reviews": 800,
+    "ratingAvg": 4.3,
+    "downloads": 300000,
+    "ratings": [
+      {"name": "1 star", "count": 20},
+      {"name": "2 star", "count": 30},
+      {"name": "3 star", "count": 200},
+      {"name": "4 star", "count": 250},
+      {"name": "5 star", "count": 300}
+    ]
+  },
+  {
+    "id": 18,
+    "image": "https://i.ibb.co.com/FLZ2xqvV/download-29.jpg",
+    "title": "TravelMate",
+    "companyName": "Wanderlust Inc.",
+    "description": "TravelMate is a companion app for travelers with itinerary management, real-time flight alerts, and local guides. Includes offline maps, travel journals, and social sharing.",
+    "size": 70,
+    "reviews": 900,
+    "ratingAvg": 4.5,
+    "downloads": 450000,
+    "ratings": [
+      {"name": "1 star", "count": 15},
+      {"name": "2 star", "count": 25},
+      {"name": "3 star", "count": 200},
+      {"name": "4 star", "count": 300},
+      {"name": "5 star", "count": 360}
+    ]
+  }
+]
+ 
+   
