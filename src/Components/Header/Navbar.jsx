@@ -1,5 +1,6 @@
 import React from 'react';
-
+import logoImg from '../../assets/logo.png'
+import gitImg from '../../assets/github.png'
 const Navbar = () => {
     return (
       <div className="navbar bg-base-100 shadow-sm">
@@ -10,23 +11,32 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className=" font-bold menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li><a>Home</a></li>
         <li><a>Apps</a></li>
         <li><a>Installation</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">HERO.IO</a>
+    <img src={logoImg}alt="logo"className='w-6 h-6 ml-16'/><span><a className="btn btn-ghost text-xl m-0 p-1 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">HERO.IO</a></span>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
+    <ul className=" gap-3 font-semibold text-xl menu menu-horizontal px-1">
+      <li>
+    <a
+  className="relative bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent
+             after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px]
+             after:bg-gradient-to-r after:from-[#632EE3] after:to-[#9F62F2]"
+>
+  Home
+</a>
+
+        </li>
       <li><a>Apps</a></li>
       <li><a>Installation</a></li>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Contribute</a>
+  <a className="btn mr-16 p-8 bg-gradient-to-r from-[#632EE3] to-[#9F62F2]"><img src={gitImg} alt="github" /><span className='text-white text-xl font-bold'>Contribute</span></a>
   </div>
 </div>
     );
