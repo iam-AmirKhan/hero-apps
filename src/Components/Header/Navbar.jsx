@@ -1,6 +1,7 @@
 import React from 'react';
 import logoImg from '../../assets/logo.png'
 import gitImg from '../../assets/github.png'
+import { Link } from 'react-router';
 const Navbar = () => {
     return (
       <div className="navbar bg-base-100 shadow-sm">
@@ -17,7 +18,9 @@ const Navbar = () => {
         <li><a>Installation</a></li>
       </ul>
     </div>
-    <img src={logoImg}alt="logo"className='w-6 h-6 ml-16'/><span><a className="btn btn-ghost text-xl m-0 p-1 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">HERO.IO</a></span>
+    <img src={logoImg}alt="logo"className='w-6 h-6 ml-16'/><span>
+      <Link
+      to="/home" className="btn btn-ghost text-xl m-0 p-1 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">HERO.IO</Link></span>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className=" gap-3 font-semibold text-xl menu menu-horizontal px-1">
@@ -36,7 +39,16 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <a className="btn mr-16 p-8 bg-gradient-to-r from-[#632EE3] to-[#9F62F2]"><img src={gitImg} alt="github" /><span className='text-white text-xl font-bold'>Contribute</span></a>
+<a
+  href="https://github.com/iam-AmirKhan"
+  target="_blank"  
+  rel="noopener noreferrer" 
+  className="btn mr-16 p-8 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] flex items-center gap-2"
+>
+  <img src={gitImg} alt="github" className="w-6 h-6"/>
+  <span className='text-white text-xl font-bold'>Contribute</span>
+</a>
+
   </div>
 </div>
     );

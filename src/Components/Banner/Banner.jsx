@@ -6,7 +6,7 @@ import heroImg from '../../assets/hero.png';
 const Banner = () => {
   return (
     <div>
-      {/* Top Text Section */}
+     
       <div>
         <h1 className='text-center mt-18 text-5xl font-bold mx-auto mb-3'>
           We Build <br /> <span className='bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent'>Productive</span> Apps
@@ -17,23 +17,31 @@ const Banner = () => {
         </p>
       </div>
 
-      {/* Store Buttons */}
+ 
       <div className='mb-15 flex justify-center items-center gap-3'>
-        <div className='flex gap-1 border p-2 rounded-md transition-transform duration-300 hover:scale-105 cursor-pointer'>
+        <a
+        href="https://play.google.com/store/apps?device=chromebook&hl=en" 
+    target="_blank"
+    rel="noopener noreferrer"
+         className='flex gap-1 border p-2 rounded-md transition-transform duration-300 hover:scale-105 cursor-pointer'>
           <img src={FiImg} alt="Google Play" className='w-6 h-6' />
           <p>Google Play</p>
-        </div>
+        </a>
 
-        <div className='flex gap-2 border p-2 px-4 rounded-md transition-transform duration-300 hover:scale-105 cursor-pointer'>
+        <a
+         href="https://www.apple.com/app-store/" 
+    target="_blank"
+    rel="noopener noreferrer"
+        className='flex gap-2 border p-2 px-4 rounded-md transition-transform duration-300 hover:scale-105 cursor-pointer'>
           <img src={AppImg} alt="App Store" className='w-6 h-6' />
           <p>App Store</p>
-        </div>
+        </a>
       </div>
 
-      {/* Hero Image */}
+   
       <img src={heroImg} alt="Hero Banner" className='justify-center mx-auto' />
 
-      {/* Gradient Section */}
+   
       <div className='w-full h-[310px] bg-gradient-to-r from-[#632EE3] to-[#9F62F2] flex flex-col justify-center items-center text-white'>
         <h1 className='text-4xl font-bold mb-8 text-center'>Trusted by Millions, Built for You</h1>
 
