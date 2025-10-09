@@ -47,7 +47,7 @@ const Apps = ({ data, showAll }) => {
             ))}
           </div>
         ) : (
-          <div className="flex flex-col justify-center items-center mx-auto min-h-screen">
+          <div className="flex flex-col justify-center items-center mx-auto">
             <img src={notImg} alt="" className="mx-auto" />
             <h1 className="text-3xl font-bold text-center mt-4">
               OPPS!! APP NOT FOUND
