@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import InstalledApps from "../InstalledApps/InstalledApps";
+import { ToastContainer } from "react-toastify";
 
 const Installation = () => {
   const [installedApps, setInstalledApps] = useState([]);
@@ -17,6 +18,7 @@ const Installation = () => {
 
   return (
     <div className="max-w-5xl mx-auto mt-16 px-4">
+        <ToastContainer position="top-right" />
       <h2 className="text-3xl font-semibold mb-6 text-center">Your Installed Apps</h2>
       <p className="text-center text-gray-600 mb-20">Explore All Trending Apps on the Market developed by us</p>
       <InstalledApps installedApps={installedApps} handleUninstall={handleUninstall} />
