@@ -5,16 +5,16 @@ import heroImg from "../../assets/hero.png";
 
 const Banner = () => {
   return (
-    <div>
+    <div className="px-4 sm:px-6 lg:px-0">
       <div>
-        <h1 className="text-center mt-18 text-5xl font-bold mx-auto mb-3">
+        <h1 className="text-center mt-12 sm:mt-16 text-3xl sm:text-5xl font-bold mx-auto mb-3">
           We Build <br />{" "}
           <span className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
             Productive
           </span>{" "}
           Apps
         </h1>
-        <p className="text-center text-gray-600 mb-5">
+        <p className="text-center text-gray-600 mb-5 sm:mb-8 sm:text-base max-w-3xl mx-auto">
           At HERO.IO, we craft innovative apps designed to make everyday life
           simpler, smarter, and more exciting. <br />
           Our goal is to turn your ideas into digital experiences that truly
@@ -22,14 +22,14 @@ const Banner = () => {
         </p>
       </div>
 
-      <div className="mb-15 flex justify-center items-center gap-3">
+      <div className="mb-12 sm:mb-16 flex flex-col justify-center sm:flex-row items-center gap-3">
         <a
           href="https://play.google.com/store/apps?device=chromebook&hl=en"
           target="_blank"
           rel="noopener noreferrer"
           className="flex gap-1 border p-2 rounded-md transition-transform duration-300 hover:scale-105 cursor-pointer"
         >
-          <img src={FiImg} alt="Google Play" className="w-6 h-6" />
+          <img src={FiImg} alt="Google Play" className=" w-5 h-5 sm:w-6 sm:h-6 " />
           <p>Google Play</p>
         </a>
 
@@ -39,19 +39,19 @@ const Banner = () => {
           rel="noopener noreferrer"
           className="flex gap-2 border p-2 px-4 rounded-md transition-transform duration-300 hover:scale-105 cursor-pointer"
         >
-          <img src={AppImg} alt="App Store" className="w-6 h-6" />
+          <img src={AppImg} alt="App Store" className="w-5 h-5 sm:w-6 sm:h-6" />
           <p>App Store</p>
         </a>
       </div>
 
       <img src={heroImg} alt="Hero Banner" className="justify-center mx-auto" />
 
-      <div className="w-full h-[310px] bg-gradient-to-r from-[#632EE3] to-[#9F62F2] flex flex-col justify-center items-center text-white">
-        <h1 className="text-4xl font-bold mb-8 text-center">
+      <div className="w-full h-auto sm:h-[310px] bg-gradient-to-r from-[#632EE3] to-[#9F62F2] flex flex-col sm:flex-row flex-wrap justify-center sm:justify-around items-center text-white">
+        <h1 className=" text-3xl sm:text-4xl font-bold mb-8 text-center sm:text-left">
           Trusted by Millions, Built for You
         </h1>
 
-        <div className="flex justify-around items-center w-full max-w-4xl text-center">
+        <div className="flex sm:flex-row justify-around items-center w-full max-w-4xl text-center">
           <div>
             <p className="text-sm opacity-80">Total Downloads</p>
             <p className="text-4xl font-bold p-3">29.6M</p>

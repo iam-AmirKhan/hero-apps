@@ -5,8 +5,8 @@ import { NavLink, Link } from "react-router";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
-      <div className="navbar-start">
+    <div className="navbar bg-base-100 shadow-sm  px-4 sm:px-6 lg:px-12">
+      <div className="navbar-start flex items-center">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -41,19 +41,19 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <img src={logoImg} alt="logo" className="w-6 h-6 ml-16" />
+        <img src={logoImg} alt="logo" className="w-8 h-8 sm:w-6 sm:h-6 ml-0 sm:ml-16" />
         <span>
           <Link
             to="/"
-            className="btn btn-ghost text-xl m-0 p-1 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent"
+            className="btn btn-ghost text-lg sm:text-xl m-0 p-1 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent"
           >
             HERO.IO
           </Link>
         </span>
       </div>
 
-      <div className="navbar-center hidden lg:flex">
-        <ul className="gap-3 font-semibold text-xl menu menu-horizontal px-1">
+      <div className="navbar-center hidden lg:flex justify-center">
+        <ul className="gap-3 font-semibold text-lg sm:text-xl menu menu-horizontal px-1">
           <li>
             <NavLink
               to="/"
@@ -112,9 +112,9 @@ const Navbar = () => {
           href="https://github.com/iam-AmirKhan"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn mr-16 p-8 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] flex items-center gap-2"
+          className="btn mr-0 sm:mr-4 lg:mr-16 p-2 lg:p-8 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] flex items-center gap-2"
         >
-          <img src={gitImg} alt="github" className="w-6 h-6" />
+          <img src={gitImg} alt="github" className=" w-4 h-4 sm:w-6 sm:h-6" />
           <span className="text-white text-xl font-bold">Contribute</span>
         </a>
       </div>
