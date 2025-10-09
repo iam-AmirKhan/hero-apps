@@ -5,12 +5,17 @@ import downImg from '../../assets/icon-downloads.png';
 import ratImg from '../../assets/icon-ratings.png';
 import rivImg from '../../assets/icon-review.png';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 
 const AppDetails = () => {
   const { id } = useParams();
   const appId = parseInt(id);
   const data = useLoaderData();
+
+  const appsId = Number(id);
+  const isValidId = Number.isInteger(appsId) && appsId > 0;
+
 
   const singleApp = data.find((app) => app.id === appId);
   const { image, title, ratingAvg, downloads, reviews, companyName, ratings , description } =
@@ -19,6 +24,8 @@ const AppDetails = () => {
 
   const [installed, setInstalled] = useState(false);
    const [installedApps, setInstalledApps] = useState([]);
+
+   
 
    useEffect(() => {
     const storedApps = JSON.parse(localStorage.getItem("installedApps") || "[]");
@@ -46,6 +53,11 @@ const AppDetails = () => {
         App not found !
       </div>
     );
+  }
+    if(!isValidId){
+    return(
+<ErrorPage/>
+    )
   }
 
   const ratingData = ratings || [];
@@ -127,7 +139,7 @@ const AppDetails = () => {
       </div>
 <div>
   <h1 className="font-bold mt-15">Description</h1>
-    <p className="mt-6 text-gray-600 leading-relaxed text-justify border-t pt-4">
+    <p className="mt-6 mb-10 text-gray-600 leading-relaxed text-justify border-t pt-4">
     {description}
   </p>
 </div>

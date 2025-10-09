@@ -1,22 +1,56 @@
-import React, { Suspense } from "react";
+import React, { useState, Suspense } from "react";
 import App from "../app/App";
 
 const Apps = ({ data, showAll }) => {
-      const displayedApps = showAll ? data : data.slice(0, 8);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredApps = data.filter((app) =>
+    app.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const displayedApps = showAll ? filteredApps : filteredApps.slice(0, 8);
 
   return (
-    <div>
-      <h1 className="text-5xl mt-16 mb-6 font-bold text-center">Our All Applications</h1>
-      <p className="mb-16 text-center text-gray-600">
-       Explore All Apps on the Market developed by us. We code for Millions
+    <div className="w-10/12 mx-auto">
+      <h1 className="text-5xl mt-16 mb-6 font-bold text-center bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
+        Our All Applications
+      </h1>
+      <p className="mb-12 text-center text-gray-600">
+        Explore All Apps on the Market developed by us. We code for Millions.
       </p>
 
+     
+       {showAll && (
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
+        <p className="text-gray-700 font-medium">
+          Total Apps:{" "}
+          <span className="font-semibold text-purple-600">
+            {filteredApps.length}
+          </span>
+        </p>
+
+        <input
+          type="text"
+          placeholder="Search apps..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="border border-gray-300 rounded-xl px-4 py-2 w-full sm:w-64 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-400"
+        />
+      </div>
+       )}
+     
       <Suspense fallback={<span>Loading...</span>}>
-        <div className=" mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 justify-center items-center mb-20 px-20">
-          {displayedApps.map((singleApp) => (
-            <App key={singleApp.id} singleApp={singleApp} />
-          ))}
-        </div>
+        {displayedApps.length > 0 ? (
+          <div className="gap-y-10 mb-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center">
+            {displayedApps.map((singleApp) => (
+              <App key={singleApp.id} singleApp={singleApp} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-center text-5xl font-bold mb-20 mt-20">
+            No App Found 😢
+          </p>
+        )}
       </Suspense>
     </div>
   );
