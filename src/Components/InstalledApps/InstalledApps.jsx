@@ -24,8 +24,8 @@ const InstalledApps = ({ installedApps, handleUninstall }) => {
               <p className="text-sm text-gray-500">{app.companyName}</p>
             </div>
             <div>
-                <p>{app.rating}</p>
-                <p>{app.download}</p>
+                <p>{app.ratingAvg}</p>
+                <p>{app.downloads}</p>
             </div>
           </div>
 
