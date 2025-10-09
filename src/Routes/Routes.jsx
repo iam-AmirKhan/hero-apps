@@ -6,41 +6,33 @@ import AppPage from "../Pages/AppsPage/AppPage";
 import AppDetails from "../Pages/AppDetails/AppDetails";
 import Installation from "../Components/InstalledApps/Installation";
 
-
-
-
-
 const router = createBrowserRouter([
-
-{
-       path:"/",
-        element:<Root/>,
-      errorElement:<ErrorPage/>,
-      children:[
-        {
-          index: true,
-          loader:()=>fetch("/appsData.json"),
-          element:<Home/>,
-        },
-         {
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        loader: () => fetch("/appsData.json"),
+        element: <Home />,
+      },
+      {
         path: "/apps",
         element: <AppPage />,
         loader: () => fetch("/appsData.json"),
       },
       {
-        path: '/AppDetails/:id',
+        path: "/AppDetails/:id",
         loader: () => fetch("/appsData.json"),
-        element:<AppDetails/>
+        element: <AppDetails />,
       },
       {
         path: "/installation",
-        element: <Installation/>
-      }
-
-      ],
-    },
-
-
+        element: <Installation />,
+      },
+    ],
+  },
 ]);
 
 export default router;

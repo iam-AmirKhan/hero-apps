@@ -1,12 +1,19 @@
 import { useState, useEffect } from "react";
 import { useLoaderData, useParams } from "react-router";
-import { ToastContainer,toast } from "react-toastify";
-import downImg from '../../assets/icon-downloads.png';
-import ratImg from '../../assets/icon-ratings.png';
-import rivImg from '../../assets/icon-review.png';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
+import { ToastContainer, toast } from "react-toastify";
+import downImg from "../../assets/icon-downloads.png";
+import ratImg from "../../assets/icon-ratings.png";
+import rivImg from "../../assets/icon-review.png";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+} from "recharts";
 import ErrorPage from "../ErrorPage/ErrorPage";
-
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -16,19 +23,25 @@ const AppDetails = () => {
   const appsId = Number(id);
   const isValidId = Number.isInteger(appsId) && appsId > 0;
 
-
   const singleApp = data.find((app) => app.id === appId);
-  const { image, title, ratingAvg, downloads, reviews, companyName, ratings , description } =
-    singleApp || {};
-
+  const {
+    image,
+    title,
+    ratingAvg,
+    downloads,
+    reviews,
+    companyName,
+    ratings,
+    description,
+  } = singleApp || {};
 
   const [installed, setInstalled] = useState(false);
-   const [installedApps, setInstalledApps] = useState([]);
+  const [installedApps, setInstalledApps] = useState([]);
 
-   
-
-   useEffect(() => {
-    const storedApps = JSON.parse(localStorage.getItem("installedApps") || "[]");
+  useEffect(() => {
+    const storedApps = JSON.parse(
+      localStorage.getItem("installedApps") || "[]"
+    );
     setInstalledApps(storedApps);
 
     if (storedApps.some((app) => app.id === appId)) {
@@ -40,11 +53,9 @@ const AppDetails = () => {
     setInstalled(true);
     toast(`${title} installed successfully!`);
 
-     const updated = [...installedApps, singleApp];
+    const updated = [...installedApps, singleApp];
     setInstalledApps(updated);
     localStorage.setItem("installedApps", JSON.stringify(updated));
-  
-
   };
 
   if (!singleApp) {
@@ -54,10 +65,8 @@ const AppDetails = () => {
       </div>
     );
   }
-    if(!isValidId){
-    return(
-<ErrorPage/>
-    )
+  if (!isValidId) {
+    return <ErrorPage />;
   }
 
   const ratingData = ratings || [];
@@ -68,10 +77,7 @@ const AppDetails = () => {
     <div className="max-w-5xl mx-auto mt-16 px-4">
       <ToastContainer position="top-center" reverseOrder={false} />
 
- 
-
       <div className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-2xl p-8 gap-8">
-        
         <div className="flex-shrink-0 w-full md:w-1/2">
           <img
             src={image}
@@ -80,24 +86,29 @@ const AppDetails = () => {
           />
         </div>
 
-       
         <div className="flex flex-col justify-center w-full md:w-1/2 space-y-4">
           <h2 className="text-3xl font-semibold">{title}</h2>
-       <div className="flex gap-3">
-          <p className="text-gray-400">Developed by</p><span className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-bold">{companyName}</span>
-
-       </div>
+          <div className="flex gap-3">
+            <p className="text-gray-400">Developed by</p>
+            <span className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-bold">
+              {companyName}
+            </span>
+          </div>
           <div className=" flex gap-8 items-center mt-4 text-gray-700 justify-center">
             <div>
-            <img src={ratImg} alt="" />
-             Rating
-             <p className="text-2xl font-bold">{ratingAvg}</p>
-             </div>
-            <div> <img src={downImg} alt="" /> Downloads 
-           <p className="text-2xl font-bold">{downloads}</p>
+              <img src={ratImg} alt="" />
+              Rating
+              <p className="text-2xl font-bold">{ratingAvg}</p>
             </div>
-            <div> <img src={rivImg} alt="" /> Reviews 
-            <p className="text-2xl font-bold">{reviews}</p>
+            <div>
+              {" "}
+              <img src={downImg} alt="" /> Downloads
+              <p className="text-2xl font-bold">{downloads}</p>
+            </div>
+            <div>
+              {" "}
+              <img src={rivImg} alt="" /> Reviews
+              <p className="text-2xl font-bold">{reviews}</p>
             </div>
           </div>
 
@@ -112,14 +123,12 @@ const AppDetails = () => {
           >
             {installed ? "Installed" : "Install Now"}
           </button>
-           <ToastContainer />
+          <ToastContainer />
         </div>
       </div>
 
-<div className="mt-12 bg-white rounded-2xl shadow-lg p-6">
-        <h3 className="text-2xl font-semibold text-start mb-4">
-          Ratings
-        </h3>
+      <div className="mt-12 bg-white rounded-2xl shadow-lg p-6">
+        <h3 className="text-2xl font-semibold text-start mb-4">Ratings</h3>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart
             layout="vertical"
@@ -137,13 +146,12 @@ const AppDetails = () => {
           </BarChart>
         </ResponsiveContainer>
       </div>
-<div>
-  <h1 className="font-bold mt-15">Description</h1>
-    <p className="mt-6 mb-10 text-gray-600 leading-relaxed text-justify border-t pt-4">
-    {description}
-  </p>
-</div>
-
+      <div>
+        <h1 className="font-bold mt-15">Description</h1>
+        <p className="mt-6 mb-10 text-gray-600 leading-relaxed text-justify border-t pt-4">
+          {description}
+        </p>
+      </div>
     </div>
   );
 };

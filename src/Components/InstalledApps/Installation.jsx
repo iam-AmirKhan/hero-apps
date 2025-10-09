@@ -7,7 +7,9 @@ const Installation = () => {
   const [sortBy, setSortBy] = useState("");
 
   useEffect(() => {
-    const storedApps = JSON.parse(localStorage.getItem("installedApps") || "[]");
+    const storedApps = JSON.parse(
+      localStorage.getItem("installedApps") || "[]"
+    );
     setInstalledApps(storedApps);
   }, []);
 
@@ -18,16 +20,22 @@ const Installation = () => {
   };
 
   const sortedApps = [...installedApps];
-  if (sortBy === "downloadsAsc") sortedApps.sort((a, b) => a.downloads - b.downloads);
-  else if (sortBy === "downloadsDesc") sortedApps.sort((a, b) => b.downloads - a.downloads);
+  if (sortBy === "downloadsAsc")
+    sortedApps.sort((a, b) => a.downloads - b.downloads);
+  else if (sortBy === "downloadsDesc")
+    sortedApps.sort((a, b) => b.downloads - a.downloads);
 
   return (
     <div className="max-w-5xl mx-auto mt-16 px-4">
-        <ToastContainer position="top-right" />
-      <h2 className="text-3xl font-semibold mb-6 text-center">Your Installed Apps</h2>
-      <p className="text-center text-gray-600 mb-20">Explore All Trending Apps on the Market developed by us</p>
+      <ToastContainer position="top-right" />
+      <h2 className="text-3xl font-bold mb-6 text-center">
+        Your Installed Apps
+      </h2>
+      <p className="text-center text-gray-600 mb-20">
+        Explore All Trending Apps on the Market developed by us
+      </p>
 
-       <div className="flex justify-end mb-4">
+      <div className="flex justify-end mb-4">
         <select
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
@@ -38,7 +46,10 @@ const Installation = () => {
           <option value="downloadsDesc">High-Low ↓</option>
         </select>
       </div>
-      <InstalledApps installedApps={sortedApps} handleUninstall={handleUninstall} />
+      <InstalledApps
+        installedApps={sortedApps}
+        handleUninstall={handleUninstall}
+      />
     </div>
   );
 };
