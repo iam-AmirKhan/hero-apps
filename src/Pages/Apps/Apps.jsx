@@ -1,6 +1,8 @@
 import React, { useState, Suspense } from "react";
 import App from "../app/App";
 import notImg from "../../assets/App-Error.png";
+
+
 const Apps = ({ data, showAll }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -10,6 +12,7 @@ const Apps = ({ data, showAll }) => {
 
   const displayedApps = showAll ? filteredApps : filteredApps.slice(0, 8);
 
+   
   return (
     <div className="w-10/12 mx-auto">
       <h1 className="text-5xl mt-16 mb-6 font-bold text-center">
