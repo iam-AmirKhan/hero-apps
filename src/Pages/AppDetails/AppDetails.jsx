@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLoaderData, useParams } from "react-router";
 import { ToastContainer,toast } from "react-toastify";
 import downImg from '../../assets/icon-downloads.png';
 import ratImg from '../../assets/icon-ratings.png';
 import rivImg from '../../assets/icon-review.png';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
+
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -17,10 +18,26 @@ const AppDetails = () => {
 
 
   const [installed, setInstalled] = useState(false);
+   const [installedApps, setInstalledApps] = useState([]);
+
+   useEffect(() => {
+    const storedApps = JSON.parse(localStorage.getItem("installedApps") || "[]");
+    setInstalledApps(storedApps);
+
+    if (storedApps.some((app) => app.id === appId)) {
+      setInstalled(true);
+    }
+  }, [appId]);
 
   const handleInstall = () => {
     setInstalled(true);
     toast(`${title} installed successfully!`);
+
+     const updated = [...installedApps, singleApp];
+    setInstalledApps(updated);
+    localStorage.setItem("installedApps", JSON.stringify(updated));
+  
+
   };
 
   if (!singleApp) {
