@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import { ToastContainer,toast } from "react-toastify";
-import downImg from '../../assets/icon-downloads.png'
+import downImg from '../../assets/icon-downloads.png';
 import ratImg from '../../assets/icon-ratings.png';
-import rivImg from '../../assets/icon-review.png'
+import rivImg from '../../assets/icon-review.png';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
+
 const AppDetails = () => {
   const { id } = useParams();
   const appId = parseInt(id);
   const data = useLoaderData();
 
   const singleApp = data.find((app) => app.id === appId);
-  const { image, title, ratingAvg, downloads, reviews, companyName } =
+  const { image, title, ratingAvg, downloads, reviews, companyName, ratings , description } =
     singleApp || {};
+
 
   const [installed, setInstalled] = useState(false);
 
@@ -27,6 +30,10 @@ const AppDetails = () => {
       </div>
     );
   }
+
+  const ratingData = ratings || [];
+
+  const colors = ["#F44336", "#FF9800", "#FFC107", "#8BC34A", "#4CAF50"];
 
   return (
     <div className="max-w-5xl mx-auto mt-16 px-4">
@@ -79,6 +86,35 @@ const AppDetails = () => {
            <ToastContainer />
         </div>
       </div>
+
+<div className="mt-12 bg-white rounded-2xl shadow-lg p-6">
+        <h3 className="text-2xl font-semibold text-start mb-4">
+          Ratings
+        </h3>
+        <ResponsiveContainer width="100%" height={300}>
+          <BarChart
+            layout="vertical"
+            data={ratingData}
+            margin={{ top: 20, right: 30, left: 50, bottom: 20 }}
+          >
+            <XAxis type="number" />
+            <YAxis dataKey="name" type="category" />
+            <Tooltip />
+            <Bar dataKey="count" radius={[6, 6, 6, 6]}>
+              {ratingData.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={colors[index]} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+<div>
+  <h1 className="font-bold mt-15">Description</h1>
+    <p className="mt-6 text-gray-600 leading-relaxed text-justify border-t pt-4">
+    {description}
+  </p>
+</div>
+
     </div>
   );
 };
