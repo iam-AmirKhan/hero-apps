@@ -14,7 +14,7 @@ const Apps = ({ data, showAll }) => {
 
    
   return (
-    <div className="w-10/12 mx-auto">
+    <div className="max-w-screen-xl w-full mx-auto px-4">
       <h1 className="text-5xl mt-16 mb-6 font-bold text-center">
         Our All Applications
       </h1>
@@ -41,7 +41,7 @@ const Apps = ({ data, showAll }) => {
 
       <Suspense fallback={<span>Loading...</span>}>
         {displayedApps.length > 0 ? (
-          <div className="gap-y-10 mb-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center">
             {displayedApps.map((singleApp) => (
               <App key={singleApp.id} singleApp={singleApp} />
             ))}

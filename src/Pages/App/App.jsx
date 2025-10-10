@@ -6,11 +6,11 @@ const App = ({ singleApp }) => {
   const { image, title, downloads, ratingAvg, id } = singleApp;
   return (
     <Link to={`/AppDetails/${id}`}>
-      <div className="w-[357px] h-[404px] shadow-lg gap-3 mt-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 rounded-xl bg-white">
+      <div className=" w-full max-w-[357px] h-[404px] shadow-lg gap-3 mt-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 rounded-xl bg-white">
         <img
           className="w-[285px] h-[285px] mx-auto rounded-t-xl"
           src={image}
-          alt=""
+          alt="image"
         />
         <h1 className=" ml-3 font-bold mt-2 mb-3">{title}</h1>
         <div className="flex justify-between">
